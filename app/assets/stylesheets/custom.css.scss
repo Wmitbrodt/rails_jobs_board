@@ -3,4 +3,117 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+
+@mixin transition($x) {
+  -webkit-transition: $x;
+  -moz-transition: $x;
+  -o-transition: $x;
+  -ms-transition: $x;
+  transition: $x;
+}
+
 /*  Universal  */
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+    background: rgba(0, 150, 136, 0.6), url(/assets/allison-research-bones-c9083fef3f10ef81eb6d255409999e5da35698884409946c30ca6e3695783d63.jpg);
+    background: -moz-radial-gradient(center, ellipse cover, #1e5799 0%, rgba(0, 150, 136, 0.6) 0%, #0C526C 100%, #3d7eaa 100%, #182848 100%, #6e48aa 100%, #6e48aa 100%), url(/assets/allison-research-bones-c9083fef3f10ef81eb6d255409999e5da35698884409946c30ca6e3695783d63.jpg);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #1e5799), color-stop(0%, rgba(0, 150, 136, 0.6)), color-stop(100%, #0C526C), color-stop(100%, #3d7eaa), color-stop(100%, #182848), color-stop(100%, #6e48aa), color-stop(100%, #6e48aa)), url(/assets/allison-research-bones-c9083fef3f10ef81eb6d255409999e5da35698884409946c30ca6e3695783d63.jpg);
+    background: -webkit-radial-gradient(center, ellipse cover, #1e5799 0%, rgba(0, 150, 136, 0.6) 0%, #0C526C 100%, #3d7eaa 100%, #182848 100%, #6e48aa 100%, #6e48aa 100%), url(/assets/allison-research-bones-c9083fef3f10ef81eb6d255409999e5da35698884409946c30ca6e3695783d63.jpg);
+    background: -o-radial-gradient(center, ellipse cover, #1e5799 0%, rgba(0, 150, 136, 0.6) 0%, #0C526C 100%, #3d7eaa 100%, #182848 100%, #6e48aa 100%, #6e48aa 100%), url(/assets/allison-research-bones-c9083fef3f10ef81eb6d255409999e5da35698884409946c30ca6e3695783d63.jpg);
+    background: -ms-radial-gradient(center, ellipse cover, #1e5799 0%, rgba(0, 150, 136, 0.6) 0%, #0C526C 100%, #3d7eaa 100%, #182848 100%, #6e48aa 100%, #6e48aa 100%), url(/assets/allison-research-bones-c9083fef3f10ef81eb6d255409999e5da35698884409946c30ca6e3695783d63.jpg);
+    background: radial-gradient(ellipse at center, #1e5799 0%, rgba(0, 150, 136, 0.6) 0%, #0C526C 100%, #3d7eaa 100%, #182848 100%, #6e48aa 100%, #6e48aa 100%), url(/assets/allison-research-bones-c9083fef3f10ef81eb6d255409999e5da35698884409946c30ca6e3695783d63.jpg);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0, 150, 136, 0.6) ', endColorstr='#6e48aa',GradientType=1 );
+    font-family: 'Lato', sans-serif;
+    padding-top: 90px;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.navbar-default {
+	background-color: white;
+	border-radius: 0;
+	height: 80px;
+	padding: 15px 0;
+	border: none;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+}
+
+.navbar-inverse {
+    background-color: #fff;
+    border: none;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+    padding: 15px 0;
+}
+
+.navbar-inverse .navbar-link, .navbar-inverse .navbar-nav > li > a {
+    color: #9d9d9d;
+    color: #777;
+    @include transition(all 0.4s ease-in-out);
+    &:hover {
+      color: #00e3cd;
+    }
+}
+
+.navbar-brand {
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-size: 2em;
+	font-weight: 300;
+	color: #00e3cd !important;
+}
+
+
+  .navbar-inverse .navbar-toggle:focus {
+    background-color: #00e3cd;
+}
+
+.collapsing ul li a, .in ul li a {
+
+color: #00e3cd!important;
+}
+
+.collapsing ul li a:hover, .in ul li a:hover {color: #00e3cd!important;}
+
+.navbar-toggle {
+    border-color: #333;
+    background-color: #00e3cd;
+}
+#jobs {
+	.job {
+		padding: 1em 0;
+		border-bottom: 1px solid rgba(250,250,250, 0.5);
+		h2 {
+			font-size: 2.5em;
+			font-weight: 300;
+			margin-bottom: 0;
+			color: white;
+			a {
+				color: white;
+			}
+		}
+		p {
+			color: rgba(250,250,250, 0.5);
+		}
+	}
+}
+
+#links {
+	margin-top: 2em;
+}
